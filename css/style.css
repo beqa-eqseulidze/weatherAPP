@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #fffffb;
+    position:relative;    
+}
+div.loader{
+    position:absolute;
+    display: none;
+    justify-content: center;
+    height: 300vh;
+    width:100%;
+    top:0;  
+    left:0;    
+    background:white;
+    z-index:100;
+}
+div.loader .circle{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    border-top: 10px solid rgb(110, 172, 243);
+    border-left:10px solid black;
+    border-right:10px solid black;
+    border-bottom:10px solid rgb(110, 172, 243);
+    position:absolute;
+    z-index:101;
+    transform:translateX(-50%);      
+    left:48%;
+    top:10%;
+    animation-name: loader;
+    animation-duration: 0.8s;
+    animation-iteration-count:100;
+    animation-timing-function: linear;
+} 
+@keyframes loader {
+        0%{transform:rotate(0deg)}
+        100%{transform: rotate(360deg);}
+}
+
+/* search and mode section */
+
+/* search section */
+#section1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 80%;
+    max-width: 1500px;
+    margin-inline: auto;
+    align-items: center;
+}
+
+#section1-part1 {
+    width: 60%;
+}
+
+#display-flex {
+    width: 100%;
+    display: flex;
+}
+
+
+#search {
+    width: 100%;
+    padding: 8px 15px;
+    border: none;
+    max-width: 600px;
+    border-radius: 50px;
+    background-color: #e8e8e8;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+#search:focus {
+    outline: 1px solid #5b7aa6;
+}
+
+.fa-magnifying-glass {
+    color: #5b7aa6;
+    font-size: 1.7rem;
+    padding-top: 9px;
+    padding-right: 5px;
+    transform: translateX(-150%);
+
+}
+
+/* mode button */
+
+/* light */
+.toggle {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    height: 31px;
+    border-radius: 50px;
+    transition: .2s;
+    /* background: linear-gradient(145deg, #c1bdbd, #fff); */
+    background: #e8e8e8;
+}
+
+.toggle i {
+    width: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.toggle .ball {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    /* margin: 3px; */
+    border-radius: 50%;
+    transition: .3s ease-out;
+    background: #151d2a;
+}
+
+#toggle {
+    display: none;
+}
+
+.fa-sun {
+    color: #fafafa;
+}
+
+.fa-moon {
+    color: #151d2a;
+}
+
+/* dark */
+.dark {
+    background: #151d2a;
+}
+
+.dark #search {
+    background: #e8e8e8b0
+}
+
+.dark #maininfo {
+    background: #e8e8e8b0;
+}
+
+.dark #location {
+    color: #fffffb;
+}
+
+.dark #temperature {
+    color: #fffffb;
+}
+
+.dark #description {
+    background: #f0f0f06a;
+    color: #fffffb;
+}
+
+.dark #other-information {
+    color: #fffffb;
+}
+
+.dark #sunsetandrise {
+    color: #fffffb;
+}
+
+.dark .Weather {
+    color: #fffffb;
+}
+
+.dark .day {
+    color: #fffffb;
+}
+
+.dark .toggle {
+    background: #e8e8e8b0
+}
+
+.dark .toggle .bx-sun {
+    color: #fafafa;
+}
+
+.dark .toggle .bxs-moon {
+    color: #151d2a;
+}
+
+.dark .toggle .ball {
+    background: #fafafa;
+    transform: translateX(29px);
+}
+.fa-magnifying-glass {
+    cursor: pointer;
+}
+
+/* main info */
+#maininfo {
+    width: 80%;
+    max-width: 1500px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #e8e8e8;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+/* section 2 */
+#section2 {
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+/* main info */
+
+/* main photo */
+#main-photo {
+    width: 47%;
+    position: absolute;
+    left: 46%;
+    top: 0%;
+}
+
+#location {
+    color: #1f2d61;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+
+}
+
+#temperature {
+    color: #1f2d61;
+    font-size: 5rem;
+    line-height: 7.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+}
+
+#description {
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 18px;
+    background-color: #f0f0f0;
+    color: #1f2d61;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 50px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+}
+
+#other-information {
+    width: 50%;
+    color: #1f2d61;
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    justify-content: space-between;
+}
+
+#other-information span {
+    margin-left: 15px;
+}
+
+/* sunset and sunrise */
+#line {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* position: absolute;
+    left: 10%;
+    width: 80%; */
+
+}
+
+#sunrise i {
+    color: rgba(255, 171, 131, 1);
+
+}
+
+#sunset span {
+    margin-right: 15px;
+}
+
+#sunrise span {
+    margin-left: 15px;
+}
+
+#sunset i {
+    color: rgba(254, 226, 110, 1);
+}
+
+#sunsetandrise {
+    width: 100%;
+    height: 200px;/*beqa ==============================================*/
+    font-family: 'Mulish', sans-serif;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: #1f2d61;
+    margin-top: 40px;
+   
+}
+
+#sunrise {
+    margin-top: 7%;
+    position: absolute;
+    left: 11%;
+}
+
+#sunset {
+    margin-top: 19%;
+    position: absolute;
+    right: 12%;
+}
+
+/* Hourly weather  */
+.Today {
+    position:relative; /* beqa======================================*/
+    /* margin-top: 50px;  beqa=====================================================*/
+}
+
+.title {
+    margin-bottom: 3%;
+}
+
+.title h2 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+    color: rgba(128, 128, 128, 0.726);
+    padding-left: 20px;
+}
+
+.Weather {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #1f2d61;
+    padding: 10px
+}
+
+.Am10 h3 {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+.Weather div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cloud img {
+    width: 100px;
+}
+
+/* forecast for next days */
+.nextdays {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 20px;
+    color: #1f2d61;
+}
+
+.day div {
+    width: 6%;
+}
+
+
+#first4,
+#last4 {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (min-width: 701px) {
+
+    #arrowLeft,
+    #arrowRight {
+        display: none;
+    }
+}
+
+/* responsive for mobiles */
+@media only screen and (min-width: 360px) and (max-width: 900px) {
+
+    /* search and mode */
+    #section1 {
+        width: 90%;
+    }
+
+    #section1-part1 {
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+
+    .dark #maininfo {
+        background: none;
+    }
+
+    /* main info */
+    #maininfo {
+        width: 100%;
+        background: none;
+        overflow: hidden;
+    }
+
+    #other-information {
+        width: 100%;
+    }
+
+}
+
+/* Scroll for the main section */
+@media only screen and (max-width: 600px) {
+    #section1 {
+        width: 96%;
+    }
+
+    #section1-part1 {
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+
+    #maininfo {
+        width: 96%;
+        padding: 0;
+        background-color: #fffffb;
+    }
+
+    #location {
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 400;
+    }
+
+    #temperature {
+        font-size: 4rem;
+        line-height: 6rem;
+        font-weight: 400;
+    }
+
+    #description {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+
+    #section2 {
+        padding: 0;
+    }
+
+    #other-information {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+
+    #other-information span {
+        margin-left: 10px;
+    }
+
+    .dark #maininfo {
+        background: none;
+    }
+
+    #sunsetandrise {
+        width: 100%;
+       /* height: 300px;  beqa==========================================*/
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    #line {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #sunrise {
+        margin-top: -50%;
+        left: 2%;
+    }
+
+    #sunset {
+        margin-top: -40%;
+        right: 2%;
+    }
+
+    .title h2 {
+        padding: 0;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .Am10 h3 {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+
+    .nextdays {
+        padding: 0;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+
+    .nextdays>div {
+        margin-bottom: 10px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 350px) {
+    .Today {
+        margin-top: -200px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 350px) {
+    #sunrise {
+        margin-top: -46%;
+    }
+
+    #sunset {
+        margin-top: -36%;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 351px) and (max-width: 450px) {
+    #sunrise {
+        margin-top: -44%;
+    }
+
+    #sunset {
+        margin-top: -32%;
+    }
+    #sunsetandrise {
+       height: 100px;  /* beqa ====================================*/
+    }
+
+    .Today {
+       /* margin-top: -170px;  beqa==================================*/
+    }
+}
+
+
+@media only screen and (min-width: 451px) and (max-width: 600px) {
+    #sunrise {
+        margin-top: -42%;
+    }
+
+    #sunset {
+        margin-top: -30%;
+    }
+    #sunsetandrise {
+        height: 100px;  /* beqa =======================================*/
+     }
+
+    .Today {
+       /* margin-top: -155px; beqa======================================*/
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    #sunrise {
+        margin-top: -40%;
+        left: 6.5%;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 500;
+    }
+
+    .Am10 h3 {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 500;
+    }
+
+    .nextdays {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    #sunset {
+        margin-top: -29%;
+        right: 6.5%;
+    }
+
+    #sunsetandrise {
+        height: 100px;  /* beqa =======================================*/
+     }
+   
+    .Today {
+      /*  margin-top: -110px; beqa ==================================*/
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1250px) {
+    #sunrise {
+        margin-top: -32%;
+        left: 14%;
+    }
+
+    #sunset {
+        margin-top: -23%;
+        right: 15%;
+    }
+
+    .Today {
+       /* margin-top: -60px; beqa=====================================*/
+    }
+}
+
+@media only screen and (min-width: 1251px) and (max-width: 1500px) {
+    #sunrise {
+        margin-top: -32%;
+        left: 13%;
+    }
+
+    #sunset {
+        margin-top: -23%;
+        right: 14%;
+    }
+
+    .Today {
+        /* margin-top: -40px; beqa =========================================*/
+    }
+}
+
+@media only screen and (min-width: 1501px) {
+    #sunrise {
+        margin-top: -32%;
+        left: 13%;
+    }
+
+    #sunset {
+        margin-top: -23%;
+        right: 13%;
+    }
+
+    .Today {
+        /* margin-top: 25px;  beqa======================================*/
+    }
+}
+
+/* slider for the weather */
+
+@media only screen and (max-width: 700px) {
+
+    #last4 {
+        display: none;
+    }
+
+    #first4,
+    #last4 {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nextdays>div {
+        margin-bottom: 10px;
+    }
+    
+    .Weather {
+        position: relative;
+    }
+
+    #arrowLeft,
+    #arrowRight {
+        position: absolute;
+        font-size: 2rem;
+    }
+
+    #arrowLeft.invisible {
+        display: none;
+    }
+
+    #arrowRight.invisible {
+        display: none;
+    }
+
+    #arrowRight.visible {
+        right: 10px;
+        bottom: 40%;
+    }
+
+    #arrowLeft.visible {
+        left: 10px;
+        bottom: 40%;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 350px) {
+
+    #arrowRight{
+        font-size: 1.5rem;
+        right: 5px;
+        bottom: 45%;
+    }
+    #arrowLeft {
+        font-size: 1.5rem;
+        left: 5px;
+        bottom: 45%;
+    }
+}

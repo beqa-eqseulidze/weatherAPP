@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEATHER APP</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+  <script type="module" defer src="../js/script.js"></script>
+  <script src="https://kit.fontawesome.com/db4c345223.js" crossorigin="anonymous"></script>
+  <!-- css link -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="loader">
+    <div class="circle"></div>
+  </div>
+  <div id="main_container">
+    <!-- first section -->
+    <div id="section1">
+      <!-- search -->
+      <div id="section1-part1">
+        <div id="display-flex">
+          <input type="text" placeholder="Search" id="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <input type="checkbox" id="toggle">
+
+      <label class="toggle" for="toggle">
+        <i class="fa-regular fa-sun"></i>
+        <i class="fa-regular fa-moon"></i>
+        <span class="ball"></span>
+      </label>
+    </div>
+
+    <!-- main info -->
+  <div  id="maininfo">
+      <!-- second section -->
+      <div id="section2" >
+          <!-- main photo -->
+        <div>
+            <!-- <img src="../components/light-mode-sunny.svg" alt="sunny" id="main-photo"> -->
+          </div>
+          <div> 
+            <p id="location"><i class="fa-solid fa-location-dot"></i> </p>
+            <p id="temperature"><sup>°</sup></p>
+            <p id="description">Cloudy</p>
+          </div>
+          <div id="other-information">
+            <div><i class="fa-solid fa-droplet"></i><span>13%</span></div>
+            <div><i class="fa-solid fa-gauge-simple"></i><span>0.533mBar</span></div>
+            <div><i class="fa-solid fa-wind"></i><span></span>9km/h</div>
+        </div>
+          <!-- sunset and sunrise -->
+
+          <div id="sunsetandrise">
+            <div><img src="../components/line.svg" alt="line" id="line"></div>
+            <div id="sunrise"><i class="fa-solid fa-circle"></i><span>07:00 AM</span></div>
+            <div id="sunset"><span>06:00 PM</span><i class="fa-solid fa-circle"></i></div>
+          </div>
+      </div>
+
+      <!-- სქროლი აქვს გასაკეთებელი და გასასწორებელია -->
+      <!-- Hourly weather -->
+      <div class="Today">
+        <!-- title -->
+        <div class="title">
+          <h2>next <br> 24 hours</h2>
+        </div>
+        <!-- weather -->
+        <div class="Weather" id="Weather">
+
+          <div id="first4">
+          
+          </div>
+
+          <div id="last4">
+           </div>
+        </div>
+          <div id="arrowRight" class="visible"><i class="fa-solid fa-arrow-right"></i></div>
+          <div id="arrowLeft" class="invisible"><i class="fa-solid fa-arrow-left"></i></div>
+      </div>
+         
+        
+  </div>
+      
+    </div>
+
+    <!-- script -->
+</body>
+
+</html>
